@@ -2,6 +2,7 @@ import './App.css';
 import ArticleList from '../ArticleList/ArticleList';
 import { useState, useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
+import { ReactComponent as NewsPaperImg } from '../assets/noun_Newspaper_3963888.svg';
 
 const App = () => {
   const [section, setSection] = useState('');
@@ -24,7 +25,8 @@ const App = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Fresh News Box</h1>
+        <h1 className="App-title">Fresh News Box</h1>
+        <NewsPaperImg className="news-icon"/>
       </header>
       <Switch>
         <Route to="/">
