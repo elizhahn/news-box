@@ -5,9 +5,9 @@ import { Route, Switch } from 'react-router-dom';
 import { ReactComponent as NewsPaperImg } from '../assets/noun_Newspaper_3963888.svg';
 
 const App = () => {
-  const [section, setSection] = useState('');
+  // const [section, setSection] = useState('');
   const [articles, setArticles] = useState([]);
-  const [expanded, setExpanded] = useState(false);
+  // const [expanded, setExpanded] = useState(false);
   const [err, setErr] = useState(''); 
 
   useEffect(()=> {
@@ -31,6 +31,7 @@ const App = () => {
       <Switch>
         <Route to="/">
           <ArticleList
+            err={err}
             articles={articles}
           />
         </Route> 
