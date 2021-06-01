@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+- node
+notificatons:
+  email: false
+script:
+- npm test
+- npm run build
+deploy:
+  api_key:
+    secure: HNIqH8q1ZQmR6Runk/MawCx/uYI2yMXEyEmIzovQSnL1M3+q9CoCVzu2MoxfZG+RMRKeZ+B0K47aCV6sjISrMvh/nWto+rHvbxCP+Ey40+W41XvX4r3XQm3YvLCZlKsHDZYR72yJ7/NMJUT2biwOgANx+rHb3J5Ep1GuMeKnrr/Sk2HkOmqg4p/udhFB9t1tjExHmp/GFqOT8Jnyev/7DhVc+lkruJVyxW+KYAnBeQ701BTvkSRDGodKRNS7PqIjyDgauRVD9wLndHA3JYkwyiQZjagmn1EryuWjed/s8ko/8ddegtLCRds4zudvf6tdJFPxFyeYuCwxsL0evwFJ4tgROC9JM6vLOdoozJ6N4QCxZbZRl+AAsLO8T4WwejC+wfxlr3OJEhaA4NaYevEA0FMw9GoOP0kVaFlCDkwtXDrwEVVWBcTebqwADv0r4T1rZipcv+cQMAA4oIXSziMMEx+awZYF3YvMpAdBr8PT3pTZS4yoyk+I+gorpQJJL60RsyHrQRo6+Dl3Q8cJS8o7RtgWWIxUSyh+l3MEk/wPj6puXssoyixZ3U2BvAVLMMIXSJ+5vqU/3TxI1rSeQmxWsBwJdo+eh80S+QtbBJHVWHKnmmAT0Dq28bpAImorthi2ttq5+lRBy2eY16iEuerrNHHfm6ySlIFlDzu+jpb/ifE=
+app: fresh-news-box
+skip_cleanup: true
