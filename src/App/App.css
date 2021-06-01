@@ -3,19 +3,23 @@
 }
 
 .App-header {
+  display: flex;
+  justify-content: space-around; 
+  align-items: center; 
   background-color: rgb(56, 61, 71);
 }
 
 .App-title {
   margin: 0;
-  padding: 20px; 
+  padding: 30px; 
   color: aliceblue; 
 }
 
 .news-icon {
   height: 50px;
   width: 50px; 
-  fill: aliceblue; 
+  fill: aliceblue;
+  margin-top: 5px;  
 }
 
 .button {
