@@ -1,6 +1,7 @@
 import './App.css';
 import ArticleList from '../ArticleList/ArticleList';
 import { useState } from 'react';
+import { Route, Switch } from 'react-router-dom';
 
 const App = () => {
   const [section, setSection] = useState('')
@@ -12,7 +13,12 @@ const App = () => {
       <header className="App-header">
       
       </header>
-      <ArticleList/>
+      <Switch>
+        <Route to="/">
+          <ArticleList/>
+        </Route> 
+      </Switch>
+      
     </div>
   );
 }
