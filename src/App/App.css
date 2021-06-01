@@ -2,3 +2,32 @@
   text-align: center;
 }
 
+.App-header {
+  display: flex;
+  justify-content: space-around; 
+  align-items: center; 
+  background-color: rgb(56, 61, 71);
+}
+
+.App-title {
+  margin: 0;
+  padding: 30px; 
+  color: aliceblue; 
+}
+
+.news-icon {
+  height: 50px;
+  width: 50px; 
+  fill: aliceblue;
+  margin-top: 5px;  
+}
+
+.button {
+  background-color: aliceblue;
+  border-color: rgb(0,82,111);
+  padding: 10px;
+  margin: 10px; 
+  font-weight: 600; 
+
+}
+

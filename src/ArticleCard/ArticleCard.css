@@ -1,0 +1,24 @@
+.card {
+  margin-bottom: 10px; 
+  box-shadow: 0 0 5px black; 
+}
+
+.card-title {
+  margin: 0;  
+  color: rgb(0,82,111);
+}
+
+.expanded-card {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-date {
+  align-self: center;
+  margin: 5px; 
+  font-size: 1.2em;  
+}
+
+.card-date-intro {
+  color: rgb(56, 61, 71);
+}
