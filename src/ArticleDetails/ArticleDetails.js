@@ -2,7 +2,7 @@ import React from 'react';
 import './ArticleDetails.css';
 
 const ArticleDetails = ({ title, byline, abstract, img, articleLink }) => {
-  console.log(img)
+  console.log(articleLink)
   return (
     <div>
       <h2>{title}</h2>
@@ -12,7 +12,12 @@ const ArticleDetails = ({ title, byline, abstract, img, articleLink }) => {
         className="article-img"
         src={img[0].url}
       />
-      <a src={articleLink}/>
+      <a 
+        className="article-link"
+        src={articleLink}
+      >
+        TAKE ME TO THE FULL ARTICLE
+      </a>
     </div>
   )
 }

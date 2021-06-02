@@ -1,9 +1,18 @@
 .article-img {
   height: 200px;
   min-width: 200px; 
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 .article-abstract {
   font-size: 1.4em;
   color: rgb(0,82,111); 
+}
+
+.article-link {
+  display: block;
+  margin: 15px;
+  color: rgb(0,82,111);
+  text-shadow: 0 0 4px rgb(0,82,111);
+  font-weight: 600; 
 }

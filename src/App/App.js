@@ -52,6 +52,7 @@ const App = () => {
             abstract={selectedArticle.abstract}
             img={selectedArticle.multimedia}
             article={selectedArticle}
+            articleLink={selectedArticle.url}
           />
         </Route>
       </Switch>
