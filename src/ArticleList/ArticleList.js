@@ -2,7 +2,7 @@ import { React } from "react";
 import ArticleCard from '../ArticleCard/ArticleCard';
 import './ArticleList.css';
 
-const ArticleList = ({ articles, showDetails }) => {
+const ArticleList = ({ articles, showDetails, section }) => {
   const articleList = articles.map((article, i) => {
     return <ArticleCard
               key={i}
@@ -14,6 +14,7 @@ const ArticleList = ({ articles, showDetails }) => {
   })
   return (
     <main className="article-list-container">
+      <h2 className="article-list-section">{`You are now viewing the ${section} section...`}</h2>
       { articleList }
     </main>
   )

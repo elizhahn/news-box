@@ -8,7 +8,7 @@ import { Route, Switch } from 'react-router-dom';
 import { ReactComponent as NewsPaperImg } from '../assets/noun_Newspaper_3963888.svg';
 
 const App = () => {
-  // const [section, setSection] = useState('');
+  const [section, setSection] = useState('home');
   const [articles, setArticles] = useState([]);
   const [selectedArticle, setSelectedArticle] = useState({})
   const [err, setErr] = useState(''); 
@@ -39,6 +39,7 @@ const App = () => {
     .then(articles => {
       console.log(articles)
       setArticles(articles.results)
+      setSection(section)
     })
     .catch(err => {
       setErr(err.message)
@@ -57,6 +58,7 @@ const App = () => {
             err={err}
             articles={articles}
             showDetails={showDetails}
+            section={section}
           />
         </Route> 
         <Route exact path="/sections">
