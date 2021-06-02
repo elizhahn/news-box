@@ -1,5 +1,6 @@
 import './App.css';
 import ArticleList from '../ArticleList/ArticleList';
+import ArticleDetails from '../ArticleDetails/ArticleDetails';
 import { useState, useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { ReactComponent as NewsPaperImg } from '../assets/noun_Newspaper_3963888.svg';
@@ -7,7 +8,7 @@ import { ReactComponent as NewsPaperImg } from '../assets/noun_Newspaper_3963888
 const App = () => {
   // const [section, setSection] = useState('');
   const [articles, setArticles] = useState([]);
-  // const [expanded, setExpanded] = useState(false);
+  const [selectedArticle, setSelectedArticle] = useState({})
   const [err, setErr] = useState(''); 
 
   useEffect(()=> {
@@ -22,6 +23,14 @@ const App = () => {
     })
   }, [])
 
+  const showDetails = (title) => {
+    const selectedArticle = articles.find(article => {
+      return article.title === title; 
+    });
+    console.log(selectedArticle)
+    setSelectedArticle(selectedArticle); 
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -29,12 +38,23 @@ const App = () => {
         <NewsPaperImg className="news-icon"/>
       </header>
       <Switch>
-        <Route to="/">
+        <Route exact path="/">
           <ArticleList
             err={err}
             articles={articles}
+            showDetails={showDetails}
           />
         </Route> 
+        <Route path ='/:title'>
+          <ArticleDetails
+            title={selectedArticle.title}
+            byline={selectedArticle.byline}
+            abstract={selectedArticle.abstract}
+            img={selectedArticle.multimedia}
+            article={selectedArticle}
+            articleLink={selectedArticle.url}
+          />
+        </Route>
       </Switch>
       
     </div>
