@@ -2,6 +2,7 @@ import './App.css';
 import ArticleList from '../ArticleList/ArticleList';
 import ArticleDetails from '../ArticleDetails/ArticleDetails';
 import NavBar from '../NavBar/NavBar';
+import Sections from '../Sections/Sections';
 import { useState, useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { ReactComponent as NewsPaperImg } from '../assets/noun_Newspaper_3963888.svg';
@@ -32,6 +33,18 @@ const App = () => {
     setSelectedArticle(selectedArticle); 
   }
 
+  const findArticles = (section) => {
+    fetch(`https://api.nytimes.com/svc/topstories/v2/${section}.json?api-key=${process.env.REACT_APP_API_KEY}`)
+    .then(response => response.json())
+    .then(articles => {
+      console.log(articles)
+      setArticles(articles.results)
+    })
+    .catch(err => {
+      setErr(err.message)
+    })
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -46,8 +59,10 @@ const App = () => {
             showDetails={showDetails}
           />
         </Route> 
-        <Route exact path="/section">
-          <p>Here is where the sections will go</p>
+        <Route exact path="/sections">
+          <Sections
+            findArticles={findArticles}
+          />
         </Route>
         <Route exact path ="/:title">
           <ArticleDetails
