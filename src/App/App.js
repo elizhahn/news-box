@@ -46,7 +46,10 @@ const App = () => {
             showDetails={showDetails}
           />
         </Route> 
-        <Route path ='/:title'>
+        <Route exact path="/section">
+          <p>Here is where the sections will go</p>
+        </Route>
+        <Route exact path ="/:title">
           <ArticleDetails
             title={selectedArticle.title}
             byline={selectedArticle.byline}

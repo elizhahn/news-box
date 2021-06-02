@@ -7,10 +7,18 @@ import './NavBar.css';
 const NavBar = () => {
   return (
     <nav className="nav-bar-mobile">
-      <NavLink to="/">
+      <NavLink 
+        className="nav-link"
+        activeClassName="active" 
+        to="/"
+      >
         <BiHomeAlt className="nav-icon"/>
       </NavLink>
-      <NavLink to="/sections">
+      <NavLink 
+        className="nav-link"
+        activeClassName="active" 
+        to="/section"
+      >
         <BiMenu className="nav-icon"/>
       </NavLink>
     </nav>
