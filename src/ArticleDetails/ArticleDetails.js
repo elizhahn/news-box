@@ -4,7 +4,7 @@ import './ArticleDetails.css';
 const ArticleDetails = ({ title, byline, abstract, img, articleLink }) => {
   console.log(articleLink)
   return (
-    <div>
+    <div className="article-details-container">
       <h2>{title}</h2>
       <p>{byline}</p>
       <p className="article-abstract">{abstract}</p>
@@ -15,7 +15,7 @@ const ArticleDetails = ({ title, byline, abstract, img, articleLink }) => {
       />
       <a 
         className="article-link"
-        src={articleLink}
+        href={articleLink}
       >
         TAKE ME TO THE FULL ARTICLE
       </a>

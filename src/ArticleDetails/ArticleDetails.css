@@ -1,3 +1,7 @@
+.article-details-container {
+  margin: 10px; 
+}
+
 .article-img {
   height: 200px;
   min-width: 200px; 
