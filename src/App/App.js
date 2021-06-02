@@ -1,6 +1,7 @@
 import './App.css';
 import ArticleList from '../ArticleList/ArticleList';
 import ArticleDetails from '../ArticleDetails/ArticleDetails';
+import NavBar from '../NavBar/NavBar';
 import { useState, useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { ReactComponent as NewsPaperImg } from '../assets/noun_Newspaper_3963888.svg';
@@ -45,7 +46,10 @@ const App = () => {
             showDetails={showDetails}
           />
         </Route> 
-        <Route path ='/:title'>
+        <Route exact path="/section">
+          <p>Here is where the sections will go</p>
+        </Route>
+        <Route exact path ="/:title">
           <ArticleDetails
             title={selectedArticle.title}
             byline={selectedArticle.byline}
@@ -56,7 +60,7 @@ const App = () => {
           />
         </Route>
       </Switch>
-      
+      <NavBar/>
     </div>
   );
 }

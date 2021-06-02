@@ -1,0 +1,25 @@
+.nav-bar-mobile {
+  display: flex; 
+  justify-content: space-around;
+  align-items: center;  
+  height: 50px; 
+  background-color: aliceblue;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 5px -2px rgb(0,82,111); 
+}
+
+.nav-icon {
+  width: 35px;
+  height: 35px; 
+}
+
+.nav-link {
+  color: rgb(56, 61, 71);
+}
+
+.active {
+  color: rgb(0,82,111);
+}
