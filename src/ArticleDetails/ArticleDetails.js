@@ -11,6 +11,7 @@ const ArticleDetails = ({ title, byline, abstract, img, articleLink }) => {
       <img 
         className="article-img"
         src={img[0].url}
+        alt={img[0].caption}
       />
       <a 
         className="article-link"
