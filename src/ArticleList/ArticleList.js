@@ -1,5 +1,6 @@
 import { React } from "react";
 import ArticleCard from '../ArticleCard/ArticleCard';
+import './ArticleList.css';
 
 const ArticleList = ({ articles, showDetails }) => {
   const articleList = articles.map((article, i) => {
@@ -12,7 +13,7 @@ const ArticleList = ({ articles, showDetails }) => {
            />
   })
   return (
-    <main>
+    <main className="article-list-container">
       { articleList }
     </main>
   )

@@ -33,6 +33,18 @@ const App = () => {
     setSelectedArticle(selectedArticle); 
   }
 
+  const findArticles = (section) => {
+    fetch(`https://api.nytimes.com/svc/topstories/v2/${section}.json?api-key=${process.env.REACT_APP_API_KEY}`)
+    .then(response => response.json())
+    .then(articles => {
+      console.log(articles)
+      setArticles(articles.results)
+    })
+    .catch(err => {
+      setErr(err.message)
+    })
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -48,7 +60,9 @@ const App = () => {
           />
         </Route> 
         <Route exact path="/sections">
-          <Sections/>
+          <Sections
+            findArticles={findArticles}
+          />
         </Route>
         <Route exact path ="/:title">
           <ArticleDetails
