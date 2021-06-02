@@ -1,0 +1,9 @@
+.article-img {
+  height: 200px;
+  min-width: 200px; 
+}
+
+.article-abstract {
+  font-size: 1.4em;
+  color: rgb(0,82,111); 
+}
