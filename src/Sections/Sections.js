@@ -4,19 +4,18 @@ import { Link } from 'react-router-dom';
 import './Sections.css';
 
 const Sections = ({ findArticles }) => {
-  const [chosenSection, setSection] = useState('')
+  const [chosenSection, setSection] = useState('home')
   const sections = ["arts", "automobiles", "books", "business", "fashion", "food", "health", "home", "insider", "magazine", "movies", "nyregion", "obituaries", "opinion", "politics", "realestate", "science", "sports", "sundayreview", "technology", "theater", "t-magazine", "travel", "upshot", "us", "world"]
 
   const sectionChoices = sections.map(section => {
     return (
-      <>
       <label 
+        key={section}
         className="sections-label"
-        for={section}
+        htmlFor={section}
       >
          <input 
             className="sections-input"
-            key={section}
             type="radio" 
             id={section} 
             name="section" 
@@ -25,7 +24,6 @@ const Sections = ({ findArticles }) => {
             onChange={() => setSection(section)}
         />
         {section}</label>
-      </>
     )
   })
   return (
