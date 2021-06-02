@@ -17,7 +17,7 @@ const NavBar = () => {
       <NavLink 
         className="nav-link"
         activeClassName="active" 
-        to="/section"
+        to="/sections"
       >
         <BiMenu className="nav-icon"/>
       </NavLink>

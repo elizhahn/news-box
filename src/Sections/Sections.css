@@ -1,0 +1,23 @@
+.sections-container {
+  display: flex;
+  flex-direction: column; 
+  justify-content: flex-start; 
+  align-items: flex-start;
+  margin: 20px 30px;  
+}
+
+.sections-input {
+  margin-right: 100px;
+  height: 20px; 
+  width: 20px;  
+}
+
+.sections-label { 
+  display: block;
+  margin: 10px 0px; 
+  font-size: 1.4em; 
+}
+
+.sections-intro {
+  display: flex; 
+}
