@@ -4,9 +4,9 @@ import { BiMenu } from 'react-icons/bi';
 import { NavLink } from 'react-router-dom';
 import './NavBar.css';
 
-const NavBar = () => {
+const NavBar = ({ style }) => {
   return (
-    <nav className="nav-bar-mobile">
+    <nav className={style}>
       <NavLink 
         className="nav-link"
         activeClassName="active" 

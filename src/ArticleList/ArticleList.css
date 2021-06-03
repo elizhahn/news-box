@@ -1,5 +1,5 @@
 .article-list-container {
-  padding-bottom: 50px; 
+  padding: 118px 0px 50px 0px;  
 }
 
 .article-list-section {
@@ -7,5 +7,17 @@
   padding: 15px;
   background-color: aliceblue; 
   color: rgb(56, 61, 71);
-  font-weight: 400; 
+  font-weight: 400;
+  position: fixed;
+  width: 100%;   
+}
+
+.article-list {
+  padding-top: 90px; 
+}
+
+@media screen and (min-width: 1000px) {
+  .article-list-container {
+    padding-top: 150px; 
+  }
 }

@@ -15,7 +15,9 @@ const ArticleList = ({ articles, showDetails, section }) => {
   return (
     <main className="article-list-container">
       <h2 className="article-list-section">{`You are now viewing the ${section} section...`}</h2>
-      { articleList }
+      <div className="article-list">
+        { articleList }
+      </div>
     </main>
   )
 }

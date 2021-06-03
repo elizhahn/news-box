@@ -11,6 +11,10 @@
   box-shadow: 0 -2px 5px -2px rgb(0,82,111); 
 }
 
+.nav-bar-desktop {
+  display: none; 
+}
+
 .nav-icon {
   width: 35px;
   height: 35px; 
@@ -22,4 +26,27 @@
 
 .active {
   color: rgb(0,82,111);
+}
+
+@media screen and (min-width: 1000px) {
+ .nav-bar-mobile {
+   display: none; 
+ }
+
+ .nav-bar-desktop {
+  display: block; 
+  position: absolute;
+  left: 20px;
+  top: 100px;  
+}
+
+ .nav-link {
+  color: aliceblue;
+  margin: 0px 20px;  
+}
+
+.active {
+  color: rgb(122, 180, 242)
+}
+ 
 }

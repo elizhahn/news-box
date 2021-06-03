@@ -51,6 +51,9 @@ const App = () => {
       <header className="App-header">
         <h1 className="App-title">Fresh News Box</h1>
         <NewsPaperImg className="news-icon"/>
+        <NavBar
+          style={"nav-bar-desktop"}
+        />
       </header>
       <Switch>
         <Route exact path="/">
@@ -77,7 +80,9 @@ const App = () => {
           />
         </Route>
       </Switch>
-      <NavBar/>
+      <NavBar
+        style={"nav-bar-mobile"}
+      />
     </div>
   );
 }
