@@ -52,7 +52,7 @@ const App = () => {
         <h1 className="App-title">Fresh News Box</h1>
         <NewsPaperImg className="news-icon"/>
         <NavBar
-          style={"nav-bar-desktop"}
+          styleName={"nav-bar-desktop"}
         />
       </header>
       <Switch>
@@ -69,7 +69,7 @@ const App = () => {
             findArticles={findArticles}
           />
         </Route>
-        <Route exact path ="/:title">
+        <Route exact path ="/title">
           <ArticleDetails
             title={selectedArticle.title}
             byline={selectedArticle.byline}
@@ -81,7 +81,7 @@ const App = () => {
         </Route>
       </Switch>
       <NavBar
-        style={"nav-bar-mobile"}
+        styleName={"nav-bar-mobile"}
       />
     </div>
   );

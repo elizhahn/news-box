@@ -10,7 +10,7 @@ const ArticleCard = ({ title, publishDate, showDetails }) => {
       <h2 className="card-title">{ title }</h2>
       <div className="expanded-card">
         <time className="card-date"><span className="card-date-intro">published:</span> { cleanedDate }</time>
-        <Link to={`/${title}`}>
+        <Link to={`/title`}>
           <button 
             className="button"
             onClick={() => showDetails(title)}

@@ -2,7 +2,7 @@ import React from 'react';
 import './ArticleDetails.css';
 
 const ArticleDetails = ({ title, byline, abstract, img, articleLink }) => {
-  console.log(articleLink)
+  console.log(title, byline, abstract, img, articleLink )
   return (
     <div className="article-details-container">
       <h2>{title}</h2>
