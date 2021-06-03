@@ -5,12 +5,13 @@ import { Link } from 'react-router-dom';
 
 const ArticleCard = ({ title, publishDate, showDetails }) => {
   const cleanedDate = formatDate(publishDate)
+  const formatTitle = encodeURIComponent(title)
   return (
     <article className="card">
       <h2 className="card-title">{ title }</h2>
       <div className="expanded-card">
         <time className="card-date"><span className="card-date-intro">published:</span> { cleanedDate }</time>
-        <Link to={`/title`}>
+        <Link to={`/${formatTitle}`}>
           <button 
             className="button"
             onClick={() => showDetails(title)}

@@ -69,7 +69,7 @@ const App = () => {
             findArticles={findArticles}
           />
         </Route>
-        <Route exact path ="/title">
+        <Route exact path ="/:title">
           <ArticleDetails
             title={selectedArticle.title}
             byline={selectedArticle.byline}
