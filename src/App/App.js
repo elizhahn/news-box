@@ -6,6 +6,7 @@ import Sections from '../Sections/Sections';
 import { useState, useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { ReactComponent as NewsPaperImg } from '../assets/noun_Newspaper_3963888.svg';
+import { fetchArticles, fetchHomeArticles } from '../apiCalls';
 
 const App = () => {
   const [section, setSection] = useState('home');
@@ -14,10 +15,8 @@ const App = () => {
   const [err, setErr] = useState(''); 
 
   useEffect(()=> {
-    fetch(`https://api.nytimes.com/svc/topstories/v2/home.json?api-key=${process.env.REACT_APP_API_KEY}`)
-    .then(response => response.json())
+    fetchHomeArticles()
     .then(articles => {
-      console.log(articles)
       setArticles(articles.results)
     })
     .catch(err => {
@@ -29,15 +28,12 @@ const App = () => {
     const selectedArticle = articles.find(article => {
       return article.title === title; 
     });
-    console.log(selectedArticle)
     setSelectedArticle(selectedArticle); 
   }
 
   const findArticles = (section) => {
-    fetch(`https://api.nytimes.com/svc/topstories/v2/${section}.json?api-key=${process.env.REACT_APP_API_KEY}`)
-    .then(response => response.json())
+    fetchArticles(section)
     .then(articles => {
-      console.log(articles)
       setArticles(articles.results)
       setSection(section)
     })
@@ -51,6 +47,9 @@ const App = () => {
       <header className="App-header">
         <h1 className="App-title">Fresh News Box</h1>
         <NewsPaperImg className="news-icon"/>
+        <NavBar
+          styleName={"nav-bar-desktop"}
+        />
       </header>
       <Switch>
         <Route exact path="/">
@@ -77,7 +76,9 @@ const App = () => {
           />
         </Route>
       </Switch>
-      <NavBar/>
+      <NavBar
+        styleName={"nav-bar-mobile"}
+      />
     </div>
   );
 }

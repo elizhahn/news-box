@@ -1,4 +1,5 @@
 .article-details-container {
+  padding: 160px 0px 50px 0px;  
   margin: 10px;
   height: 100%;  
 }
@@ -20,4 +21,11 @@
   color: rgb(0,82,111);
   text-shadow: 0 0 4px rgb(0,82,111);
   font-weight: 600; 
+}
+
+@media screen and (min-width: 1000px) {
+  .article-img {
+    height: 400px;
+    width: 600px; 
+  }
 }

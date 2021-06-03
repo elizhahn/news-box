@@ -7,11 +7,14 @@
   justify-content: space-around; 
   align-items: center; 
   background-color: rgb(56, 61, 71);
+  position: fixed;
+  top: 0; 
+  width: 100%;  
 }
 
 .App-title {
   margin: 0;
-  padding: 40px; 
+  padding: 40px 10px; 
   color: aliceblue; 
 }
 
@@ -28,6 +31,26 @@
   padding: 10px;
   margin: 10px; 
   font-weight: 600; 
-
 }
+
+.err-msg {
+  padding-top: 200px; 
+}
+
+@media screen and (min-width: 1000px) {
+  .App-header {
+    justify-content: space-between; 
+    height: 150px; 
+  }
+
+  .App-title {
+    padding: 0px 20px 20px 20px; 
+  }
+
+  .news-icon {
+    padding: 20px;
+    height: 80px;
+    width: 80px;  
+  }
+ }
 
