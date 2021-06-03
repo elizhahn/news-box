@@ -33,6 +33,10 @@
   font-weight: 600; 
 }
 
+.err-msg {
+  padding-top: 200px; 
+}
+
 @media screen and (min-width: 1000px) {
   .App-header {
     justify-content: space-between; 
