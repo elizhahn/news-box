@@ -17,7 +17,6 @@ const App = () => {
     fetch(`https://api.nytimes.com/svc/topstories/v2/home.json?api-key=${process.env.REACT_APP_API_KEY}`)
     .then(response => response.json())
     .then(articles => {
-      console.log(articles)
       setArticles(articles.results)
     })
     .catch(err => {
@@ -29,7 +28,6 @@ const App = () => {
     const selectedArticle = articles.find(article => {
       return article.title === title; 
     });
-    console.log(selectedArticle)
     setSelectedArticle(selectedArticle); 
   }
 
@@ -37,7 +35,6 @@ const App = () => {
     fetch(`https://api.nytimes.com/svc/topstories/v2/${section}.json?api-key=${process.env.REACT_APP_API_KEY}`)
     .then(response => response.json())
     .then(articles => {
-      console.log(articles)
       setArticles(articles.results)
       setSection(section)
     })
