@@ -6,6 +6,7 @@ import Sections from '../Sections/Sections';
 import { useState, useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { ReactComponent as NewsPaperImg } from '../assets/noun_Newspaper_3963888.svg';
+import { fetchArticles, fetchHomeArticles } from '../apiCalls';
 
 const App = () => {
   const [section, setSection] = useState('home');
@@ -14,8 +15,7 @@ const App = () => {
   const [err, setErr] = useState(''); 
 
   useEffect(()=> {
-    fetch(`https://api.nytimes.com/svc/topstories/v2/home.json?api-key=${process.env.REACT_APP_API_KEY}`)
-    .then(response => response.json())
+    fetchHomeArticles()
     .then(articles => {
       setArticles(articles.results)
     })
@@ -32,8 +32,7 @@ const App = () => {
   }
 
   const findArticles = (section) => {
-    fetch(`https://api.nytimes.com/svc/topstories/v2/${section}.json?api-key=${process.env.REACT_APP_API_KEY}`)
-    .then(response => response.json())
+    fetchArticles(section)
     .then(articles => {
       setArticles(articles.results)
       setSection(section)
