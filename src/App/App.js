@@ -8,6 +8,7 @@ import { Route, Switch } from 'react-router-dom';
 import { ReactComponent as NewsPaperImg } from '../assets/noun_Newspaper_3963888.svg';
 import { fetchArticles, fetchHomeArticles } from '../apiCalls';
 
+
 const App = () => {
   const [section, setSection] = useState('home');
   const [articles, setArticles] = useState([]);
@@ -41,8 +42,9 @@ const App = () => {
       setErr(err.message)
     })
   }
-
+  console.log(articles)
   return (
+    
     <div className="App">
       <header className="App-header">
         <h1 className="App-title">Fresh News Box</h1>
