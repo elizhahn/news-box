@@ -18,6 +18,7 @@ const App = () => {
   useEffect(()=> {
     fetchHomeArticles()
     .then(articles => {
+      // console.log(articles)
       setArticles(articles.results)
     })
     .catch(err => {
@@ -42,12 +43,12 @@ const App = () => {
       setErr(err.message)
     })
   }
-  console.log(articles)
+  
   return (
     
     <div className="App">
       <header className="App-header">
-        <h1 className="App-title">Fresh News Box</h1>
+        <h1 className="App-title" data-cy="app-title">Fresh News Box</h1>
         <NewsPaperImg className="news-icon"/>
         <NavBar
           styleName={"nav-bar-desktop"}

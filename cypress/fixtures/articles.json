@@ -1,4 +1,8 @@
-[
+{
+"copyright": "Copyright (c) 2021 The New York Times Company. All Rights Reserved.",
+"last_updated": "2021-06-04T16:35:20-04:00",
+"num_results": 2,
+"results": [
 {
 "abstract": "The decision puts a time frame on the former president’s suspension, which was put in place after the Capitol riots in January.",
 "byline": "By Mike Isaac and Sheera Frenkel",
@@ -17,6 +21,14 @@
   "type": "image",
   "url": "https://static01.nyt.com/images/2021/06/04/business/04facebook/merlin_184403487_0edf74c3-47e5-41cc-a9c5-ac76401bd12d-superJumbo.jpg",
   "width": 2048},
+  {"caption": "Former President Donald J. Trump would be eligible for reinstatement on Facebook in January of 2023.",
+    "copyright": "Erin Schaff/The New York Times",
+    "format": "superJumbo",
+    "height": 1365,
+    "subtype": "photo",
+    "type": "image",
+    "url": "https://static01.nyt.com/images/2021/06/04/business/04facebook/merlin_184403487_0edf74c3-47e5-41cc-a9c5-ac76401bd12d-superJumbo.jpg",
+    "width": 2048},
   {"caption": "Former President Donald J. Trump would be eligible for reinstatement on Facebook in January of 2023.",
   "copyright": "Erin Schaff/The New York Times",
   "format": "superJumbo",
@@ -55,6 +67,14 @@
     "type": "image",
     "url": "https://static01.nyt.com/images/2021/06/05/arts/04vangogh-1/04vangogh-1-superJumbo.jpg",
     "width": 2048},
+    {"caption": "Puppies are out and fish are back studies say having a fishtank in your house significatnly reduces stress and increases your serotonin",
+      "copyright": "Liz Lemon/The New York Times",
+      "format": "superJumbo",
+      "height": 1365,
+      "subtype": "photo",
+      "type": "image",
+      "url": "https://static01.nyt.com/images/2021/06/05/arts/04vangogh-1/04vangogh-1-superJumbo.jpg",
+      "width": 2048},
     {"caption": "Former President Donald J. Trump would be eligible for reinstatement on Facebook in January of 2023.",
     "copyright": "Liz Lemon/The New York Times",
     "format": "superJumbo",
@@ -75,4 +95,7 @@
   "uri": "nyt://article/432e0073-c37d-5b32-b745-c10eaa7069cf",
   "url": "https://www.nytimes.com/2021/06/04/arts/design/van-gogh-painting-maine.html"
   }
-]
+],
+"section": "home",
+"status": "OK"
+}
