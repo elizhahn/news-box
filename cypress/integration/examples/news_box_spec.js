@@ -18,4 +18,11 @@ describe("Fresh News Box", () => {
     .and("contain", "published: 2021-06-04").get("[data-cy=card-btn]").should("contain", "EXPLORE MORE")
     .get("[data-cy=card-img]").should("have.attr", "src").should("include", "https://static01.nyt.com/images/2021/06/04/business/04facebook/04facebook-thumbLarge.jpg");
   });
+
+  it("should allow a user to navigate to sections and home views", () => {
+    cy.get("[data-cy=nav-icon]").eq(1).click({force: true});
+    cy.url().should("eq","http://localhost:3000/sections");
+    cy.get("[data-cy=nav-icon]").first().click({force: true});
+    cy.url().should("eq", "http://localhost:3000/");
+  });
 });
