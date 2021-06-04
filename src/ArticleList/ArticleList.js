@@ -7,6 +7,7 @@ const ArticleList = ({ articles, showDetails, section, err }) => {
     return <ArticleCard
               key={i}
               id={Date.now()}
+              img={article.multimedia[2].url}
               title={article.title}
               publishDate={article.published_date}
               showDetails={showDetails}

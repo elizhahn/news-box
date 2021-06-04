@@ -13,7 +13,10 @@
 }
 
 .article-list {
-  padding-top: 90px; 
+  padding-top: 90px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;   
 }
 
 @media screen and (min-width: 1000px) {

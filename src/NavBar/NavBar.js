@@ -1,6 +1,6 @@
 import React from 'react';
 import { BiHomeAlt } from 'react-icons/bi';
-import { BiMenu } from 'react-icons/bi';
+import { FaRegNewspaper } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
 import './NavBar.css';
 
@@ -19,7 +19,7 @@ const NavBar = ({ styleName }) => {
         activeClassName="active" 
         to="/sections"
       >
-        <BiMenu className="nav-icon"/>
+        <FaRegNewspaper className="nav-icon"/>
       </NavLink>
     </nav>
     
