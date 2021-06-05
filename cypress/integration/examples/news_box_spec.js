@@ -75,8 +75,8 @@ describe("Fresh News Box", () => {
       cy.visit("http://localhost:3000/");
       cy.viewport('iphone-6');
     });
-    it.only("should be a test", () => {
-
+    it("should display an error message if there is an issues with getting articles", () => {
+      cy.get("[data-cy=server-err-msg]").should("contain", "Sorry, we're having an issue grabbing today's news..check back later");
     });
   });
 });
