@@ -1,70 +1,100 @@
-# Getting Started with Create React App
+# Fresh News Box
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a Mod 3 take home challenge by [Elizabeth Hahn](https://github.com/elizhahn)
 
-## Available Scripts
+### Deployed App: [Fresh News Box](https://fresh-news-box.herokuapp.com/)
+ 
+## Outline
 
-In the project directory, you can run:
+1. [Project Overview](#project-overview)
+2. [App Overview](#app-overview)
+3. [Learning Goals](#learning-goals)
+4. [Tech Stack](#tech-stack)
+5. [Features](#features)
+6. [Instructions for Installation](#instructions-for-installation)
+7. [Future Iterations](#future-iterations)
+8. [Project Reflections](#project-reflections)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Project Overview
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+This was a take home challenge completed in 2 days with the goal of finishing an MVP applicaiton in a 6-7 hour time frame. The MVP application included consuming the NYT's Top Stories API to create a small applicaition that allows users to digest stories of their choice. 
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## App Overview
 
-### `npm run build`
+This application will dispaly a list of articles for the user, allow the user to view more details about the article, including visiting the NYT's article page, and additionally gives them the option to check out different "sections" of the paper to render a list of articles related to that section, such as "arts" or "magazines". 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Learning Goals
+ 
+ - Building an MVP app within a time constraint
+ - Presenting the project and speaking to development choices that were made
+ - Taking and implementing feedback
+ - Speaking to my development process and following best practices with planning and execution
+  
+## Tech Stack
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Front-End:
+- JavaScript ECMA6
+  - React (create-react-app)
+  - React Router
+- HTML5
+- CSS3
+  - SASS / SCSS
 
-### `npm run eject`
+### Testing:
+- Cypress
+  - Mocha
+  - Chai
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Features
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Homepage
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+![](https://media.giphy.com/media/aiWNzSHIVGYzFexoRe/giphy.gif)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+### Article Details
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![](https://media.giphy.com/media/BXtcRqnlaUudUl84t4/giphy.gif)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Changing Sections
 
-### Code Splitting
+![](https://media.giphy.com/media/hVYFUtlVxqLVRKXhzN/giphy.gif)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Instructions for Installation
+  - simply visit the deployed site:[Fresh News Box](https://fresh-news-box.herokuapp.com/) 
 
-### Making a Progressive Web App
+OR
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+  - To run this application on your local machine, clone down this repo, change into the root directory from the command line, and run `npm install`. 
+    
+  - Then run `npm   start` to open the application locally. If you aren't taken there, visit `http://localhost:3000/`
+    
+  - To run the test suite locally, you will also need to run the command `npm i -D cypress` from the command line.
+    
+  - Once it  has installed, run `npx cypress open`, then select the `news_box_spec.js` test file. 
+    
+  - Note: you will need to run the application locally (start the server with `npm start` from the root directory on the command line) in order to run the automated tests.
 
-### Advanced Configuration
+## Future Iterations
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+ - a "save for later" option for the user to store articles they want to read later
+ - a search bar for each section so they can narrow down the results within the section
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Project Reflections
 
-### `npm run build` fails to minify
+### Challenges
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  - Staying within the time limit proved challenging. I am still perfecting my flow to be more efficient. 
+  - Responsively styling the sticky nav bar was a little tricky
+
+### Wins
+
+  - Following excellent project work flow including wireframes, project board flushed out with user stories, PR's were descriptive and linked to issues, and making small atomic commits
+  - Staying within the time constraint relatively close. 
+  - Effectively describing my application to a mock interviewer and talking to my design choices and recieving feedback as well as implementing changes based on the feedback
