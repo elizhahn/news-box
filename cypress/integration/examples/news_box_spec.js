@@ -34,7 +34,7 @@ describe("Fresh News Box", () => {
       cy.visit("http://localhost:3000/");
       cy.viewport('iphone-6');
     });
-    it.only("should show the user details about the article", () => {
+    it("should show the user details about the article", () => {
       cy.get("[data-cy=card-btn]").first().click()
       cy.url().should("contain", "http://localhost:3000/Facebook%20Says%20Trump%E2%80%99s%20Ban%20Will%20Last%20at%20Least%202%20Years")
       cy.get("[data-cy=details]").should("contain", "Facebook Says Trump’s Ban Will Last at Least 2 Years")
@@ -43,6 +43,21 @@ describe("Fresh News Box", () => {
       cy.get('[data-cy=details-img]').should("have.attr", "src").should("include", "https://static01.nyt.com/images/2021/06/04/business/04facebook/merlin_184403487_0edf74c3-47e5-41cc-a9c5-ac76401bd12d-superJumbo.jpg");
       cy.get("[data-cy=details-link]").should("contain", "TAKE ME TO THE FULL ARTICLE")
        .and("have.attr", "href").should("include", "https://www.nytimes.com/2021/06/04/technology/facebook-trump-ban.html")
+    });
+  });
+  describe("change article section", () => {
+    beforeEach(() => {
+      cy.intercept("https://api.nytimes.com/svc/topstories/v2/home.json?api-key=H0C3x8Db3n4KJKd8A4pqbgdQQbch2K06", {fixture: "articles.json"});
+      cy.intercept("https://api.nytimes.com/svc/topstories/v2/arts.json?api-key=H0C3x8Db3n4KJKd8A4pqbgdQQbch2K06", {fixture: "articles.json"});
+      cy.visit("http://localhost:3000/");
+      cy.viewport('iphone-6');
+    });
+    it.only("should allow a user to change the section they are viewing", () => {
+      cy.get("[data-cy=nav-icon]").eq(1).click({force: true});
+      cy.get("[data-cy=section-choice]").first().click();
+      cy.get("[data-cy=sections-btn]").click();
+      cy.url().should("eq", "http://localhost:3000/");
+      cy.get('[data-cy=section-intro]').should('contain', 'You are now viewing the arts section...');
     });
   });
 });
