@@ -22,6 +22,7 @@ const Sections = ({ findArticles }) => {
             value={section}
             checked={chosenSection === section}
             onChange={() => setSection(section)}
+            data-cy="section-choice"
         />
         {section}</label>
     )
@@ -36,6 +37,7 @@ const Sections = ({ findArticles }) => {
           <button 
             className="button"
             onClick={() => findArticles(chosenSection)}
+            data-cy="sections-btn"
           >
             SHOW ME ARTICLES
           </button>

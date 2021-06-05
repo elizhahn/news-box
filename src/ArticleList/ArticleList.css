@@ -19,6 +19,10 @@
   justify-content: center;   
 }
 
+.server-err-msg {
+
+}
+
 @media screen and (min-width: 1000px) {
   .article-list-container {
     padding-top: 150px; 

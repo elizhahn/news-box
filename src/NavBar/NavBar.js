@@ -6,24 +6,24 @@ import './NavBar.css';
 
 const NavBar = ({ styleName }) => {
   return (
-    <nav className={styleName}>
+    <nav className={styleName} data-cy="nav-bar-mobile">
       <NavLink 
         className="nav-link"
-        activeClassName="active" 
+        activeClassName="active"
+        data-cy="nav-icon" 
         to="/"
       >
         <BiHomeAlt className="nav-icon"/>
       </NavLink>
       <NavLink 
         className="nav-link"
-        activeClassName="active" 
+        activeClassName="active"
+        data-cy="nav-icon" 
         to="/sections"
       >
         <FaRegNewspaper className="nav-icon"/>
       </NavLink>
-    </nav>
-    
-     
+    </nav> 
   )
 }
 
