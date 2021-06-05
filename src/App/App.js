@@ -18,7 +18,6 @@ const App = () => {
   useEffect(()=> {
     fetchHomeArticles()
     .then(articles => {
-      // console.log(articles)
       setArticles(articles.results)
     })
     .catch(err => {
@@ -43,7 +42,7 @@ const App = () => {
       setErr(err.message)
     })
   }
-  
+  // console.log(err)
   return (
     
     <div className="App">

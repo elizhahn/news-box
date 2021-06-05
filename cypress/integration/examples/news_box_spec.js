@@ -52,12 +52,31 @@ describe("Fresh News Box", () => {
       cy.visit("http://localhost:3000/");
       cy.viewport('iphone-6');
     });
-    it.only("should allow a user to change the section they are viewing", () => {
+    it("should allow a user to change the section they are viewing", () => {
       cy.get("[data-cy=nav-icon]").eq(1).click({force: true});
       cy.get("[data-cy=section-choice]").first().click();
       cy.get("[data-cy=sections-btn]").click();
       cy.url().should("eq", "http://localhost:3000/");
       cy.get('[data-cy=section-intro]').should('contain', 'You are now viewing the arts section...');
+    });
+  });
+  describe("change article section", () => {
+    beforeEach(() => {
+      cy.intercept({
+        method: "GET",
+        url: "https://api.nytimes.com/svc/topstories/v2/home.json?api-key=H0C3x8Db3n4KJKd8A4pqbgdQQbch2K06"
+      }, 
+      {
+        statusCode: 500,
+        body: {
+          message: "Sorry, we're having an issue grabbing today's news..check back later"
+        }
+      });
+      cy.visit("http://localhost:3000/");
+      cy.viewport('iphone-6');
+    });
+    it.only("should be a test", () => {
+
     });
   });
 });

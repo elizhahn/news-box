@@ -3,6 +3,7 @@ import ArticleCard from '../ArticleCard/ArticleCard';
 import './ArticleList.css';
 
 const ArticleList = ({ articles, showDetails, section, err }) => {
+  console.log(err)
   const articleList = articles.map((article, i) => {
     console.log(article)
     return <ArticleCard
@@ -14,13 +15,14 @@ const ArticleList = ({ articles, showDetails, section, err }) => {
               showDetails={showDetails}
            />
   })
+  
   return (
     <main className="article-list-container">
       <h2 className="article-list-section" data-cy="section-intro">{`You are now viewing the ${section} section...`}</h2>
       <div className="article-list">
         {!err && !articles.length && <h1 className="err-msg" data-cy="loading-msg">Loading news...</h1>}
-        {err && <h1 className="err-msg">Sorry, we're having an issue grabbing today's news..check back later</h1>}
-        { articleList }
+        {err && <h1 className="server-err-msg" data-cy="err-msg">Sorry, we're having an issue grabbing today's news..check back later</h1>}
+        {!err && articles.length && articleList }
       </div>
     </main>
   )
