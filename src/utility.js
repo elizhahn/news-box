@@ -1,5 +1,6 @@
 export const formatDate = (date) => {
-  const dateSplit = date.split('T')
-  return dateSplit[0]
+  const dateOnly = date.split('T')
+  const convertedDate = dateOnly[0].split('-')
+  return `${convertedDate[1]}/${convertedDate[2]}/${convertedDate[0]}`
 }
 

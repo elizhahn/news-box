@@ -17,7 +17,7 @@ describe("Fresh News Box", () => {
 
     it("should display article cards", () => {
       cy.get('[data-cy=article-card]').first().should("contain", "Facebook Says Trump’s Ban Will Last at Least 2 Years")
-      .and("contain", "published: 2021-06-04").get("[data-cy=card-btn]").should("contain", "EXPLORE MORE")
+      .and("contain", "published: 06/04/2021").get("[data-cy=card-btn]").should("contain", "EXPLORE MORE")
       .get("[data-cy=card-img]").should("have.attr", "src").should("include", "https://static01.nyt.com/images/2021/06/04/business/04facebook/04facebook-thumbLarge.jpg");
     });
 
